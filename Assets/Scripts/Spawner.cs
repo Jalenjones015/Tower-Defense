@@ -6,14 +6,13 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] spawnpoints;
     public GameObject[] enemies;
-    public GameObject hands;
     int randomspawnpoint, randommonster;
     public static bool spawnallowed;
 
     public void Start()
     {
         spawnallowed = true;
-        InvokeRepeating("Spawn", 0f, 1f);
+        InvokeRepeating("Spawn", 0f, 3f);
     }
 
     void Spawn()
@@ -21,8 +20,7 @@ public class Spawner : MonoBehaviour
         if (spawnallowed)
         {
             randommonster = Random.Range(0, enemies.Length);
-           GameObject na = Instantiate(enemies[randommonster], spawnpoints[randomspawnpoint].position, Quaternion.identity);
-            na.GetComponent<Ai>().goal = hands.transform;
+            Instantiate(enemies[randommonster], spawnpoints[randomspawnpoint].position, Quaternion.identity);
         }
     }
 }
