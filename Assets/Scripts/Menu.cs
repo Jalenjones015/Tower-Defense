@@ -5,11 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public string NextScene;
 
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("Start");
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        Debug.Log("Start");
+    }
+
+    public void Howto()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         Debug.Log("Start");
     }
 
@@ -22,6 +33,18 @@ public class Menu : MonoBehaviour
     public void back()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Debug.Log("Back");
+    }
+
+    public void How2back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        Debug.Log("Back");
+    }
+
+    public void Crediback()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
         Debug.Log("Back");
     }
 }

@@ -5,27 +5,12 @@ using UnityEngine.AI;
 
 public class Ai : MonoBehaviour
 {
-    public Transform Play;
-    public GameObject Enemy;
-    NavMeshAgent en;
+    public Transform goal;
 
-    void Start()
+    public void Start()
     {
-        en = GetComponent<NavMeshAgent>();
-        
-    }
-
-    private void Update()
-    {
-        en.SetDestination(Play.position);
-    }
-
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Hands")
-        {
-            Destroy(Enemy);
-        }
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.destination = goal.position;
     }
 
 }
