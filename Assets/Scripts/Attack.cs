@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    float rotate = 50f;
     public Transform point;
     public GameObject bulletpre;
     public float bullforce = 0f;
