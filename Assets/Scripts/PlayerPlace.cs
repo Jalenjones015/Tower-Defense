@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerPlace : MonoBehaviour
 {
+    private Vector3 mOffset;
+    private float mZCoord;
+
 
     public GameObject Players1;
 
@@ -20,9 +23,6 @@ public class PlayerPlace : MonoBehaviour
         }
 
     }
-
-    private Vector3 mOffset;
-    private float mZCoord;
 
     void OnMouseDown()
     {

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    bool ispaused = false;
+    public GameObject Pausepiece;
 
     public void StartGame()
     {
@@ -46,5 +48,20 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
         Debug.Log("Back");
+    }
+
+    public void Pause()
+    {
+        if (ispaused)
+        {
+            Time.timeScale = 1;
+            ispaused = false;
+            Debug.Log("Pause");
+        }
+        else
+        {
+            Time.timeScale = 0;
+            ispaused = true;
+        }
     }
 }
