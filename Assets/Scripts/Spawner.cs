@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     public void Start()
     {
         spawnallowed = true;
-        InvokeRepeating("Spawn", 0f, 3f);
+        InvokeRepeating("Spawn", 3f, 3f);
     }
 
     void Spawn()

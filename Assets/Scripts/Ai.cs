@@ -24,7 +24,8 @@ public class Ai : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hands")
         {
-            Destroy(Enemy);
+            Destroy(gameObject);
+            Debug.Log("Died");
         }
     }
 

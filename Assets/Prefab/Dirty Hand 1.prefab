@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 725375970056397102}
   - component: {fileID: 4735406556853407996}
   - component: {fileID: 8148574656202899830}
+  - component: {fileID: 484926055353978231}
   m_Layer: 0
   m_Name: Dirty Hand 1
   m_TagString: Untagged
@@ -237,8 +238,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 8.8
-  m_Speed: 30.52
-  m_Acceleration: 22.88
+  m_Speed: 80
+  m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 50
   m_StoppingDistance: 0
@@ -262,3 +263,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Play: {fileID: 8939681330536814908, guid: 33dfa4a13edd23d4a9325ce19329ccef, type: 3}
+--- !u!135 &484926055353978231
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8148574656202899831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.35
+  m_Center: {x: 8.1, y: -5.74, z: 18.33}

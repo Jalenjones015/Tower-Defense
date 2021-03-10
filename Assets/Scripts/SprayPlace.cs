@@ -44,7 +44,7 @@ public class SprayPlace : MonoBehaviour
 
     private void Newplacement()
     {
-        if (Input.GetKeyDown(PPlayer))
+        if (Input.GetKey(PPlayer))
         {
             if (CurrectPlacement == null)
             {
