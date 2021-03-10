@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9048443192909916213}
   - component: {fileID: 9048443192909916212}
   - component: {fileID: 9048443192909916211}
-  - component: {fileID: 864819640585491010}
+  - component: {fileID: 6614696116946157822}
   m_Layer: 0
   m_Name: Mud
   m_TagString: Untagged
@@ -86,8 +86,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Play: {fileID: 8939681330536814908, guid: 33dfa4a13edd23d4a9325ce19329ccef, type: 3}
---- !u!135 &864819640585491010
-SphereCollider:
+--- !u!65 &6614696116946157822
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,8 +97,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.03
-  m_Center: {x: 0, y: 10.6, z: -15.6}
+  m_Size: {x: 34.25771, y: 47.153976, z: 35.62}
+  m_Center: {x: -0.7038555, y: 23.296986, z: 2.8969628e-15}
 --- !u!1001 &9048443193505487435
 PrefabInstance:
   m_ObjectHideFlags: 0

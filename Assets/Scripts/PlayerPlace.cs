@@ -17,7 +17,6 @@ public class PlayerPlace : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             FindObjectOfType<MouseMove>().movemouse();
-            Debug.Log("Pressing");
         }
 
     }
@@ -41,6 +40,6 @@ public class PlayerPlace : MonoBehaviour
 
     void OnMouseDrag()
     {
-        transform.position = GetMouseAsWorldPoint() + mOffset;
+        transform.position = new Vector3(GetMouseAsWorldPoint().x + mOffset.x, transform.position.y, GetMouseAsWorldPoint().z + mOffset.z);
     }
 }

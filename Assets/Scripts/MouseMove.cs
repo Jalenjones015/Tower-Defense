@@ -8,7 +8,6 @@ public class MouseMove : MonoBehaviour
     public KeyCode Open = KeyCode.Space;
     RaycastHit hit;
     
-
     public void Start()
     {
         movemouse();
@@ -19,7 +18,6 @@ public class MouseMove : MonoBehaviour
             transform.position = hit.point;
             Debug.Log("Moving");
         }
-       
     }
 
     public void movemouse()
@@ -30,13 +28,10 @@ public class MouseMove : MonoBehaviour
         {
             transform.position = hit.point;
         }
-
     }
 
     public void Update()
     {
-        //movemouse();
-
         if (Input.GetKeyDown(Open))
         {
             BuyMenu.SetActive(true);
