@@ -26,6 +26,15 @@ public class Ai : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("Died");
+
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
         }
     }
 
