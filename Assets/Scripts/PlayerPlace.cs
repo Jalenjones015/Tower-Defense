@@ -6,13 +6,17 @@ public class PlayerPlace : MonoBehaviour
 {
     private Vector3 mOffset;
     private float mZCoord;
-
-
     public GameObject Players1;
 
     public void Spawn()
     {
         Instantiate(Players1);
+
+    }
+
+    public void Dead()
+    {
+        Destroy(Players1, 30f);
     }
 
     public void Update()
@@ -21,7 +25,7 @@ public class PlayerPlace : MonoBehaviour
         {
             FindObjectOfType<MouseMove>().movemouse();
         }
-
+        Dead();
     }
 
     void OnMouseDown()
