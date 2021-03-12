@@ -32,7 +32,7 @@ public class Sprayattack : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         Quaternion look = Quaternion.LookRotation(dir);
         Vector3 rotation = look.eulerAngles;
-        turn.rotation = Quaternion.Euler(-90f, rotation.y, 0f);
+        turn.rotation = Quaternion.Euler(0f, rotation.y, 0f);
         
 
     }
