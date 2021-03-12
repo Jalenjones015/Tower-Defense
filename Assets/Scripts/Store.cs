@@ -7,35 +7,35 @@ public class Store : MonoBehaviour
 {
     public int money;
     public Text Money1;
-    Store St;
+    
 
     void Start()
     {
+        money = 50;
         Money1 = GameObject.Find("Money Text").GetComponent<Text>();
     }
 
     void Update()
     {
-        Money1.text = "5" + money.ToString();
+        Money1.text = "" + money.ToString();
     }
 
-    public int Money()
+    public void add ()
     {
-        return money;
+        money ++;
+        Money1.text = money.ToString();
     }
 
-    public void mod(int _money)
+    public void used (int usedmoney)
     {
-        money += _money;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Mud"))
+        if (money - usedmoney < 0)
         {
-            St.mod(5);
-            Debug.Log("Money");
+            Debug.Log("not enough");
         }
-
+        else
+        {
+            money -= usedmoney;
+            Money1.text = money.ToString();
+        }
     }
 }

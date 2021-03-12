@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7725558267603214875
+--- !u!1 &4164546256000382364
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7725558267603214869}
-  - component: {fileID: 7725558267603214868}
+  - component: {fileID: 4164546256000382354}
+  - component: {fileID: 4164546256000382365}
   m_Layer: 0
-  m_Name: Soap Buy
+  m_Name: 1Bottle Buy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7725558267603214869
+--- !u!4 &4164546256000382354
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7725558267603214875}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 4164546256000382364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7725558267603214868
+--- !u!114 &4164546256000382365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7725558267603214875}
+  m_GameObject: {fileID: 4164546256000382364}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbd534d8a87062e45bc56573a908ecd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Players1: {fileID: 4890466469042999127, guid: 742991c9ef5efaf4eb24158ad5db6e0b, type: 3}
-  Death: 30
+  Players1: {fileID: 6441550707596312309, guid: 40872fce04c62a44baf7e461ca79d0ea, type: 3}

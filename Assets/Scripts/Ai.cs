@@ -34,7 +34,7 @@ public class Ai : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            Destroy(gameObject); 
         }
     }
 

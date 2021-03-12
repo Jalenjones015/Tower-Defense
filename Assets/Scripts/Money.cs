@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class Money : MonoBehaviour
 {
-    Store St;
+    Store st;
+    public int add;
 
-    public void Start()
+    private void Start()
     {
-        St = GetComponent<Store>();
+        st = GameObject.FindWithTag("Bullet").GetComponent<Store>();
     }
 
-    //public void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Mud"))
-    //    {
-    //        St.mod(5);
-    //        Debug.Log("Money");
-    //    }
-  
-    //}
-
+    private void OnTriggerEnter(Collider obj)
+        {
+            if(obj.gameObject.tag == "Mud")
+            {
+                st.money += add;
+            }
+        }
 }
