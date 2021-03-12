@@ -7,7 +7,7 @@ public class Store : MonoBehaviour
 {
     public int money;
     public Text Money1;
-    
+    Store St;
 
     void Start()
     {
@@ -20,9 +20,14 @@ public class Store : MonoBehaviour
         Money1.text = "" + money.ToString();
     }
 
-    public void add ()
+    public int Money()
     {
-        money ++;
+        return money;
+    }
+
+    public void add (int _money)
+    {
+        money += _money;
         Money1.text = money.ToString();
     }
 
