@@ -104,15 +104,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d840886c63f7c72458e48824c6870640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: {fileID: 2935747409985675888}
-  bulletpre: {fileID: 6986489984617637109, guid: 989110cc70a43974daab824a23a983e6, type: 3}
-  bullforce: 0
-  betweenshots: 7
-  range: 35
-  enemytag: Dirt Hand
-  enemytag2: Mud
   turn: {fileID: 3846870525521469589}
   target: {fileID: 0}
+  point: {fileID: 2935747409985675888}
+  bulletpre: {fileID: 6986489984617637109, guid: 989110cc70a43974daab824a23a983e6, type: 3}
+  bullforce: 0.87
+  betweenshots: 7
+  range: 0
+  enemytag: Dirt Hand
+  enemytag2: Mud
 --- !u!1 &4475712506462040076
 GameObject:
   m_ObjectHideFlags: 0

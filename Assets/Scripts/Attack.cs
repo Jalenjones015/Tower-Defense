@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    public Transform turn;
+    public Transform target;
     public Transform point;
     public GameObject bulletpre;
     public float bullforce = 0f;
@@ -12,14 +14,12 @@ public class Attack : MonoBehaviour
     public float range;
     public string enemytag = "Dirt Hand";
     public string enemytag2 = "Mud";
-    public Transform turn;
-    public Transform target;
 
 
     void Start()
     {
         InvokeRepeating("updatetarget", 0f, 0.6f);
-        InvokeRepeating("updatetarget1", 0f, 0.5f);
+        InvokeRepeating("updatetarget2", 0f, 0.5f);
     }
     void Update()
     {
@@ -64,24 +64,24 @@ public class Attack : MonoBehaviour
         }
     }
 
-    void updatetarget1()
+    void updatetarget2()
     {
-        GameObject[] enemies1 = GameObject.FindGameObjectsWithTag(enemytag2);
+        GameObject[] enemies2 = GameObject.FindGameObjectsWithTag(enemytag2);
         float shortdistance = Mathf.Infinity;
-        GameObject narenemy1 = null;
-        foreach (GameObject enemy in enemies1)
+        GameObject narenemy2 = null;
+        foreach (GameObject enemy in enemies2)
         {
             float distancetoenemy = Vector3.Distance(transform.position, enemy.transform.position);
             if (distancetoenemy < shortdistance)
             {
                 shortdistance = distancetoenemy;
-                narenemy1 = enemy;
+                narenemy2 = enemy;
             }
         }
 
-        if (narenemy1 != null && shortdistance <= range)
+        if (narenemy2 != null && shortdistance <= range)
         {
-            target = narenemy1.transform;
+            target = narenemy2.transform;
         }
         else
         {
