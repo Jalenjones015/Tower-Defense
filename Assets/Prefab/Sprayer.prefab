@@ -269,6 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5e2345ca27a194d88f127d9dcc2906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 5673580663881582478, guid: d9792a5b01712de41b1f9d5114690f73, type: 3}
+  particle: {fileID: 198866036663756580, guid: d7689380619fd894c8508730e2bed11f, type: 3}
   turn: {fileID: 8302687702337966488}
   point: {fileID: 7477474896079768865}
   target: {fileID: 0}

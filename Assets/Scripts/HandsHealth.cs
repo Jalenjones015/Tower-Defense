@@ -7,6 +7,8 @@ public class HandsHealth : MonoBehaviour
     public int maxHP = 20;
     public int curHP;
     public HealthBar healthBar;
+    public GameObject lose;
+    bool isdead = false;
 
     private void Start()
     {
@@ -31,5 +33,26 @@ public class HandsHealth : MonoBehaviour
     {
         curHP -= damage;
         healthBar.SetHP(curHP);
+    }
+
+    void Lose()
+    {
+        if (curHP <= 0)
+        {
+            if (isdead)
+            {
+                lose.SetActive(false);
+                Time.timeScale = 1;
+                isdead = false;
+                Debug.Log("unpause");
+            }
+            else
+            {
+                lose.SetActive(true);
+                Time.timeScale = 0;
+                isdead = true;
+                Debug.Log("unpause");
+            }
+        }
     }
 }

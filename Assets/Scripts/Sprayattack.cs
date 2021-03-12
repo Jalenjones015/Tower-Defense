@@ -8,8 +8,8 @@ public class Sprayattack : MonoBehaviour
     public Transform point;
     public Transform target;
     public GameObject bulletpre;
-    public float bullforce = 1f;
-    public float betweenshots = .1f;
+    public float bullforce = 75f;
+    public float betweenshots = 3f;
     private float tim = 0f;
     public float range;
     public string enemytag = "Dirt Hand";
@@ -34,7 +34,7 @@ public class Sprayattack : MonoBehaviour
         Quaternion look = Quaternion.LookRotation(dir);
         Vector3 rotation = look.eulerAngles;
         turn.rotation = Quaternion.Euler(0f, rotation.y, 0f);
-        
+
 
     }
 
@@ -99,6 +99,7 @@ public class Sprayattack : MonoBehaviour
         Rigidbody rigid = bullet.GetComponent<Rigidbody>();
         rigid.AddForce(point.forward * bullforce, ForceMode.Impulse);
         Destroy(bullet, 2f);
+
     }
 
     private void OnTriggerEnter(Collider other)
