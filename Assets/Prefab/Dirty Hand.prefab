@@ -191,8 +191,8 @@ GameObject:
   - component: {fileID: 8148574656202899830}
   - component: {fileID: 9144393774738867008}
   m_Layer: 0
-  m_Name: Dirty Hand 1
-  m_TagString: Enemy
+  m_Name: Dirty Hand
+  m_TagString: Dirt Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

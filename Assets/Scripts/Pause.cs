@@ -27,13 +27,5 @@ public class Pause : MonoBehaviour
             allon.SetActive(false);
         }
     }
-    //public void ifpause()
-    //{
-    //    if (ispaused == true)
-    //    {
-    //        pausemenu.SetActive(true);
-    //        Debug.Log("Active");
-    //    }
-        
-    //}
+
 }

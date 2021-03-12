@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 591640996562177813}
   - component: {fileID: 8725401203223481416}
   m_Layer: 0
-  m_Name: Soap 2
+  m_Name: Soap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,8 @@ MonoBehaviour:
   bullforce: 0
   betweenshots: 7
   range: 35
-  enemytag: Enemy
+  enemytag: Dirt Hand
+  enemytag2: Mud
   turn: {fileID: 3846870525521469589}
   target: {fileID: 0}
 --- !u!1 &4475712506462040076

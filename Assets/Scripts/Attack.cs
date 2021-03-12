@@ -10,14 +10,16 @@ public class Attack : MonoBehaviour
     public float betweenshots = 1f;
     private float tim = 0f;
     public float range;
-    public string enemytag = "Enemy";
+    public string enemytag = "Dirt Hand";
+    public string enemytag2 = "Mud";
     public Transform turn;
     public Transform target;
 
 
     void Start()
     {
-        InvokeRepeating("updatetarget", 0f, 0.5f);
+        InvokeRepeating("updatetarget", 0f, 0.6f);
+        InvokeRepeating("updatetarget1", 0f, 0.5f);
     }
     void Update()
     {
@@ -62,6 +64,31 @@ public class Attack : MonoBehaviour
         }
     }
 
+    void updatetarget1()
+    {
+        GameObject[] enemies1 = GameObject.FindGameObjectsWithTag(enemytag2);
+        float shortdistance = Mathf.Infinity;
+        GameObject narenemy1 = null;
+        foreach (GameObject enemy in enemies1)
+        {
+            float distancetoenemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distancetoenemy < shortdistance)
+            {
+                shortdistance = distancetoenemy;
+                narenemy1 = enemy;
+            }
+        }
+
+        if (narenemy1 != null && shortdistance <= range)
+        {
+            target = narenemy1.transform;
+        }
+        else
+        {
+            target = null;
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, range);
@@ -79,6 +106,14 @@ public class Attack : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("Death by Bullet");
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Mud")
+        {
+            Destroy(gameObject);
         }
     }
 }

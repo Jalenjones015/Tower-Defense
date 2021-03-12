@@ -5,8 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hands
-  - Enemy
   - Bullet
+  - Dirt Hand
+  - Mud
+  - Enemy
   layers:
   - Default
   - TransparentFX
